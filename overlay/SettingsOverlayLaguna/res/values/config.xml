@@ -28,4 +28,8 @@
 
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">true</bool>
+
+    <!-- Double twist sensor type and vendor used by gesture setting -->
+    <string name="gesture_double_twist_sensor_type" translatable="false">com.google.sensor.double_twist</string>
+    <string name="gesture_double_twist_sensor_vendor" translatable="false">Google</string>
 </resources>
