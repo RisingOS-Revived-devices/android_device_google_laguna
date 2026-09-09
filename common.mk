@@ -11,6 +11,9 @@ PRODUCT_USE_SCUDO := true
 # Ship Google Camera
 $(call inherit-product, vendor/google/camera/config.mk)
 
+# Ship PixelExtraParts
+$(call inherit-product, packages/apps/PixelExtraParts/device.mk)
+
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
