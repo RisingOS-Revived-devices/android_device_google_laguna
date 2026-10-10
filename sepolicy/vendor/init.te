@@ -8,3 +8,4 @@ allow init proc_vendor_sched:file w_file_perms;
 allow init ram_device:blk_file w_file_perms;
 allow init sysfs_scsi_devices_0000:file w_file_perms;
 allow init userdata_exp_block_device:blk_file write;
+allow init sysfs_pixelparts_leds:file setattr;

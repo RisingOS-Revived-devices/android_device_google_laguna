@@ -585,3 +585,5 @@ genfscon tracefs /instances/i3c_master/trace u:object_r:tracefs_instances_interr
 genfscon tracefs /instances/irq_gia_google/trace u:object_r:tracefs_instances_interrupts:s0
 genfscon tracefs /instances/pinctrl_google/trace u:object_r:tracefs_instances_interrupts:s0
 genfscon tracefs /instances/spi_dw_mmio/trace u:object_r:tracefs_instances_interrupts:s0
+genfscon sysfs /devices/platform/sswrp_dpu@ec00000/efd8000.dsi2host/efd8000.dsi2host.0/backlight/panel0-backlight/brightness u:object_r:sysfs_pixelparts_leds:s0
+genfscon sysfs /devices/platform/sswrp_dpu@ec00000/efd8000.dsi2host/efd8000.dsi2host.0/backlight/panel0-backlight/max_brightness u:object_r:sysfs_pixelparts_leds:s0
