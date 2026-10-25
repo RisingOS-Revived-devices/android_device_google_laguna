@@ -1,5 +1,6 @@
 dump_hal(hal_telephony)
 
+binder_call(dumpstate, ambience_hub_default)
 binder_call(dumpstate, aocxd)
 binder_call(dumpstate, battery_mitigation)
 binder_call(dumpstate, flood_control)
@@ -9,6 +10,7 @@ binder_call(dumpstate, shared_modem_platform)
 binder_call(dumpstate, twoshay)
 
 allow dumpstate hal_battery_mitigation_service:service_manager find;
+allow dumpstate hal_secure_element_st54spi_aidl:binder call;
 allow dumpstate modem_efs_file:dir getattr;
 allow dumpstate modem_userdata_file:dir getattr;
 allow dumpstate persist_file:dir getattr;

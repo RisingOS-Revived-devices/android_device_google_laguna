@@ -4,4 +4,7 @@ type pixelmd_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(pixelmd)
 
+r_dir_file(pixelmd, cgroup)
+
 allow pixelmd pixelmd_device:chr_file rw_file_perms;
+allow pixelmd proc_vmstat:file r_file_perms;

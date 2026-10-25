@@ -8,5 +8,7 @@ init_daemon_domain(hal_secure_element_st54spi_aidl)
 
 set_prop(hal_secure_element_st54spi_aidl, vendor_secure_element_prop)
 
+allow hal_secure_element_st54spi_aidl dumpstate:fd use;
+allow hal_secure_element_st54spi_aidl dumpstate:fifo_file write;
 allow hal_secure_element_st54spi_aidl nfc_device:chr_file rw_file_perms;
 allow hal_secure_element_st54spi_aidl st54spi_device:chr_file rw_file_perms;

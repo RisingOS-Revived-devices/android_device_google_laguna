@@ -16,6 +16,7 @@ ro.config.vc_call_vol_steps=7
 vendor.audio_hal.aidl.enable=true
 
 # Battery
+vendor.battery.defender.dwell_v1p5.enable=1
 vendor.battery_mitigation.aidl.enable=true
 
 # Bluetooth
@@ -38,6 +39,9 @@ media.c2.dmabuf.padding=512
 media.c2.hal.selection=aidl
 media.c2.remove_rendering_depth=true
 
+# Context Hub
+ro.context_hub.chipset_supported=true
+
 # Crypto
 ro.crypto.volume.options=aes-256-xts:aes-256-hctr2
 
@@ -48,12 +52,14 @@ dalvik.vm.enable_time_based_gc_trigger=true
 ro.gms.dck.se_capability=1
 
 # Display
-debug.hwc.m2m_cfg=single_layer:true,gca_only:true,tile:false
+debug.hwc.m2m_cfg=single_layer:true,gca_only:true,tile:false,buffer_prealloc:true
 ro.vendor.ddk.set.afbc=1
 ro.vendor.display.ambience.enable=true
 ro.vendor.display.ambience.idle_timeout_ms=100
+ro.vendor.display.dpu_fabric_devfreq.name=fabrt_freq
 ro.vendor.display.enable_screen_context_telemetry.global=false
 ro.vendor.display.enable_screen_context_telemetry.local=false
+ro.vendor.display.g2d_fabric_devfreq.name=fabmed_freq
 ro.vendor.display.primarydisplay_dpu_path=sswrp_dpu@ec00000/efd8000.dsi2host
 ro.vendor.display.secondarydisplay_dpu_path=sswrp_dpu@ec00000/eff8000.dsi2host
 vendor.display.0.brightness.dimming.usage?=2
@@ -121,6 +127,9 @@ vendor.media.omx=0
 # PKVM
 hypervisor.memory_reclaim.supported=1
 
+# Remote provisioning
+remote_provisioning.tee.rkp_only=1
+
 # RenderEngine
 debug.renderengine.graphite_preview2_optin=true
 
@@ -145,11 +154,10 @@ debug.sf.earlyGl.sf.duration=16600000
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_sdr_dimming=1
 debug.sf.frame_rate_multiple_threshold=120
-debug.sf.hdcp_negotiation=1
-debug.sf.hdcp_support=1
 debug.sf.late.app.duration=16600000
 debug.sf.late.sf.duration=10500000
 debug.sf.layer_caching_active_layer_timeout_ms=1000
+debug.sf.productionize_readback_screenshot=1
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
 persist.sys.sf.native_mode=2

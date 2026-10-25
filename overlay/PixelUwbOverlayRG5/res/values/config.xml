@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Whether background ranging is enabled or not
+     If enabled:
+       * Background 3p apps are allowed to open new ranging sessions
+       * When previously foreground 3p apps moves to background, sessions are not terminated
+    -->
+    <bool name="background_ranging_enabled">true</bool>
+
+    <!-- Returns whether an absolute UWB initiation time should be computed and configured for
+    CCC ranging session(s).
+    If disabled, a relative UWB initiation time (the value in CCCStartRangingParams), is
+    configured for the CCC ranging session. -->
+    <bool name="ccc_absolute_uwb_initiation_time_enabled">true</bool>
+
+    <!-- Whether multicast list update notification v2 is supported or not.
+     If enabled, the notification will be parsed into version 2 if uci major version is 2.0. -->
+    <bool name="is_multicast_list_update_ntf_v2_supported">true</bool>
+
+    <!-- Whether multicast list update response v2 is supported or not.
+     If enabled, the response will be parsed into version 2 if uci major version is 2.0. -->
+    <bool name="is_multicast_list_update_rsp_v2_supported">true</bool>
+
+    <!-- Whether when hopmode doesn't set, the hopmodekey shall be set randomly.
+    If false, never sets hopmodekey randomly-->
+    <bool name="enable_random_hopmodekey">true</bool>
+
+    <!-- In order to ensure UWB ranging performance and best possible user experience for use cases
+    such as Passive Entry as defined in the CCC specification, devices must implement accurate
+    timesync. Based on the UWB_Device_Time and UWB_Device_Time_Uncertainty sent within the latest
+    Time_Sync message to the vehicle, the UWB_Time0 sent with the Ranging Session Setup Response
+    (RSS-RS) or RR-RS or CRR-RS should correspond to the actual moment in time the first UWB
+    pre-poll packet is received by the vehicle ± UWB_Device_Time_Uncertainty everytime.
+
+    It is highly recommended to keep the uncertainty as low as possible, preferably under 10ms. -->
+    <bool name="timesync_accuracy_verified">true</bool>
+
+    <!-- Whether android proprietary timesync is supported,
+     ANDROID_GID (0x0c) and ANDROID_TIMESTAMP_ANCHOR_TO_UWBS(0x03)-->
+    <bool name="android_specific_timesync_supported">true</bool>
+
+    <!-- Device with high uncertainty for timesync. 255 is max, set it to 0 if timesync is reliable.
+    Value [µsec] = 2^(timesync_uncertainty_override/8)
+    -->
+    <integer name="timesync_uncertainty_override">0</integer>
+</resources>

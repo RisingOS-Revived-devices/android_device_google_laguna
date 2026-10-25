@@ -5,3 +5,5 @@ set_prop(vendor_ims_app, vendor_rild_prop)
 
 allow vendor_ims_app hal_exynos_rild_hwservice:hwservice_manager find;
 allow vendor_ims_app hal_vendor_radio_external_service:service_manager find;
+
+dontaudit vendor_ims_app app_function_service:service_manager find;

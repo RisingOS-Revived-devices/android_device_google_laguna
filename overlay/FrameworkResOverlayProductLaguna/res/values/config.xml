@@ -30,6 +30,9 @@
     <!-- Indicating if keyboard vibration settings supported or not. -->
     <bool name="config_keyboardVibrationSettingsSupported">true</bool>
 
+    <!-- Indicating if keyboard vibration intensity settings are supported or not. Only valid if config_keyboardVibrationSettingsSupported is true. -->
+    <bool name="config_keyboardVibrationSettingsIntensitySupported">true</bool>
+
     <!-- Indicating if ringtone vibration settings supported or not. -->
     <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
 
@@ -78,6 +81,7 @@
         <item>com.sega.CrazyTaxiplayhaven</item>
         <item>en.haoplay.and.rm</item>
         <item>com.netease.g108na</item>
+        <item>com.nianticlabs.pokemongo</item>
     </string-array>
 
     <!-- Maximum number of active tasks on a given Desktop Windowing session. Set to 0 for unlimited. -->

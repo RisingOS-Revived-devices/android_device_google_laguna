@@ -11,6 +11,7 @@ binder_call(mediacodec_google, hal_camera_default)
 
 init_daemon_domain(mediacodec_google)
 
+allow mediacodec_google appdomain:memfd_file { getattr map read write };
 allow mediacodec_google dmabuf_system_heap_device:chr_file r_file_perms;
 allow mediacodec_google gpu_device:chr_file rw_file_perms;
 allow mediacodec_google video_device:chr_file { ioctl map open read write };

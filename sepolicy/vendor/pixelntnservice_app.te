@@ -1,0 +1,1 @@
+dontaudit pixelntnservice_app app_function_service:service_manager find;

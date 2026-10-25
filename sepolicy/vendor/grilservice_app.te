@@ -29,5 +29,6 @@ allow grilservice_app hal_wifi_ext_hwservice:hwservice_manager find;
 allow grilservice_app hal_wifi_ext_service:service_manager find;
 allow grilservice_app netstats_service:service_manager find;
 allow grilservice_app network_management_service:service_manager find;
+allow grilservice_app radio_service:service_manager find;
 allow grilservice_app scone_aidl_service:service_manager find;
 allow grilservice_app wifi_service:service_manager find;

@@ -1,0 +1,1 @@
+allow radio vendor_ims_app:udp_socket { getattr read setopt shutdown write };
