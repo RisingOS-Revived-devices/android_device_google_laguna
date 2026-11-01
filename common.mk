@@ -63,6 +63,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_SHIPPING_API_LEVEL := 36
 
+# Preserve the board vendor API despite Rising's first-API-level clamp.
+# Prevent legacy SIM-slot handling on eSIM-only Pixel 10 variants.
+# This release flag also supplies ro.board.api_level.
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.api_level=$(RELEASE_BOARD_API_LEVEL)
+
 # Enforce the Product interface
 PRODUCT_PRODUCT_VNDK_VERSION := current
 PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
